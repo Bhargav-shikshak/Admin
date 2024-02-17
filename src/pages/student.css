@@ -1,0 +1,30 @@
+/* student.css */
+
+.student-table {
+  border-collapse: collapse;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+  left: 2%;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Make the shadow darker */
+}
+
+.student-table th,
+.student-table td {
+  border: 2px solid black; /* Increase the border size */
+  padding: 2px;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: rgba(0, 123, 255, 0.5); /* Semi-transparent blue background */
+  color: white; /* White text color for th */
+  font-family: 'YourPrettyFont', sans-serif; /* Replace 'YourPrettyFont' with the actual font name */
+}
+
+.student-image,
+.teacher-image {
+  max-width: 80px; /* Set the maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+}

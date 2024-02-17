@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import Sidebar from "./components/sidebar";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import StudentComponent from "./pages/Student";
+import TeacherComponent from "./pages/Teacher";
+import StudentRequest from "./pages/Studentrequest";
+import TeacherMatch from "./pages/Teachermatch";
+import AssignTeacher from "./pages/Assignteacher";
+import {app} from './fierbase/fierbase';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ flex: 1 }}>
+          <div style={{ maxWidth: "lg", margin: "auto" }}>
+            <Routes>
+              <Route
+                exact
+                path={"/React-Sidebar-example/dashboard"}
+                element={<Dashboard />}
+              />
+              <Route
+                path={"/React-Sidebar-example/StudentComponent"}
+                element={<StudentComponent />}
+              />
+              <Route
+                path={"/React-Sidebar-example/TeacherComponent"}
+                element={<TeacherComponent/>}
+              />
+              <Route
+                path={"/React-Sidebar-example/studentRequest"}
+                element={<StudentRequest />}
+              />
+              <Route
+                path={"/React-Sidebar-example/teacherMatch"}
+                element={<TeacherMatch />}
+              />
+              <Route
+                path={"/React-Sidebar-example/assignteacher"}
+                element={<AssignTeacher />}
+              />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
