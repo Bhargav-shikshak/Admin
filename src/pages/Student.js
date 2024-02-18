@@ -29,31 +29,56 @@ const StudentsList = () => {
   return (
     <div>
       <h1>Students List</h1>
-      <ul>
-        {students.map((student, index) => (
-          <li key={index}>
-            <p>Address: {student.address}</p>
-            <p>Age: {student.age}</p>
-            <p>Alternate Phone: {student.alternatePhone}</p>
-            <p>CGPA Percentage: {student.cgpaPercentage}</p>
-            <p>City: {student.city}</p>
-            <p>Class Requirement: {student.classRequirement}</p>
-            <p>College: {student.college}</p>
-            <p>Email: {student.email}</p>
-            <p>Parent Name: {student.parentName}</p>
-            <p>Password: {student.password}</p>
-            <p>Phone: {student.phone}</p>
-            <p>Pincode: {student.pincode}</p>
-            <p>Selected Subject: {student.selectedSubject}</p>
-            <p>State: {student.state}</p>
-            <p>Student Class: {student.studentClass}</p>
-            <p>Student ID: {student.studentId}</p>
-            <p>Student Name: {student.studentName}</p>
-            <p>UID: {student.uid}</p>
-            {student.image && <img src={student.image} alt={student.studentName} />}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Class</th>
+            <th>CGPA Percentage</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Address</th>
+            <th>Pincode</th>
+            <th>College</th>
+            <th>Parent Name</th>
+            <th>Alternate Phone</th>
+            <th>Class Requirement</th>
+            <th>Selected Subject</th>
+            <th>UID</th>
+            <th>Password</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map((student, index) => (
+            <tr key={index}>
+              <td>{student.studentId}</td>
+              <td>{student.studentName}</td>
+              <td>{student.age}</td>
+              <td>{student.studentClass}</td>
+              <td>{student.cgpaPercentage}</td>
+              <td>{student.email}</td>
+              <td>{student.phone}</td>
+              <td>{student.city}</td>
+              <td>{student.state}</td>
+              <td>{student.address}</td>
+              <td>{student.pincode}</td>
+              <td>{student.college}</td>
+              <td>{student.parentName}</td>
+              <td>{student.alternatePhone}</td>
+              <td>{student.classRequirement}</td>
+              <td>{student.selectedSubject}</td>
+              <td>{student.uid}</td>
+              <td>{student.password}</td>
+              <td>{student.image && <img src={student.image} alt={student.studentName} />}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
