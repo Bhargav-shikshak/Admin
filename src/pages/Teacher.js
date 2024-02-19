@@ -52,7 +52,7 @@ const TeachersList = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Additional Note</th>
+            <th>Price</th>
             <th>Address</th>
             <th>City</th>
             <th>Pincode</th>
