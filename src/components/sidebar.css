@@ -6,31 +6,30 @@
   background-color: #001142;
   color: #fff;
   display: flex;
- 
-  
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 20px 0 ;
   border-top: 1px solid rgba(4, 209, 245, 0.795);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
- 
-  justify-content: center; /* Center items vertically */
 }
 
 .sidebar li {
   border-bottom: 1px solid rgba(184, 15, 15, 0.1);
   padding-top: 10px;
+  padding: 25px 0;
+  font-size: 20px;
 }
 
 .sidebar a {
   text-decoration: none;
   color: #fff;
   opacity: 0.5;
-  
 }
 
 .sidebar a:hover {
