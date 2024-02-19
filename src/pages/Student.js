@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
-
+import './Student.css';
 const StudentsList = () => {
   const [students, setStudents] = useState([]);
   
@@ -28,10 +28,11 @@ const StudentsList = () => {
 
   return (
     <div>
-      <h1>Students List</h1>
-      <table>
+     <center><h1>Students List</h1></center>
+      <table className="student-details">
         <thead>
           <tr>
+          <th>Image</th>
             <th>Student ID</th>
             <th>Student Name</th>
             <th>Age</th>
@@ -50,12 +51,13 @@ const StudentsList = () => {
             <th>Selected Subject</th>
             <th>UID</th>
             <th>Password</th>
-            <th>Image</th>
+            
           </tr>
         </thead>
         <tbody>
           {students.map((student, index) => (
             <tr key={index}>
+               <td>{student.image && <img src={student.image} alt={student.studentName} style={{ width: '100px', height: '70px' }}/>}</td>
               <td>{student.studentId}</td>
               <td>{student.studentName}</td>
               <td>{student.age}</td>
@@ -74,7 +76,7 @@ const StudentsList = () => {
               <td>{student.selectedSubject}</td>
               <td>{student.uid}</td>
               <td>{student.password}</td>
-              <td>{student.image && <img src={student.image} alt={student.studentName} />}</td>
+             
             </tr>
           ))}
         </tbody>

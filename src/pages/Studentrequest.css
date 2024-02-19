@@ -1,0 +1,35 @@
+/* student.css */
+
+.student-table {
+  border-collapse: collapse;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+  left: 2%;
+  width: 96%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+  /* Make the shadow darker */
+}
+
+.student-table th{
+  
+  border: 1px solid black; 
+  text-align: center;
+  padding: 2px;
+  height: 30px;
+  background-color: rgb(159, 196, 245);
+}
+.student-table td {
+ 
+  border: 1px solid black; /* Increase the border size */
+  padding: 2px;
+  text-align: center;
+  height: 50px;
+}
+
+
+.student-image,
+.teacher-image {
+  max-width: 80px; /* Set the maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue, set } from "firebase/database";
-
+import './teacher.css';
 const TeachersList = () => {
   const [teachers, setTeachers] = useState([]);
 
@@ -44,10 +44,11 @@ const TeachersList = () => {
 
   return (
     <div>
-      <h1>Teachers List</h1>
-      <table>
+      <center><h1>Teachers List</h1></center>
+      <table className="teacher-details">
         <thead>
           <tr>
+          <th>Image</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
@@ -58,12 +59,20 @@ const TeachersList = () => {
             <th>Qualification</th>
             <th>State</th>
             <th>Subject</th>
-            <th>Image</th>
+            
           </tr>
         </thead>
         <tbody>
           {teachers.map((teacher, index) => (
             <tr key={index}>
+               <td>
+                <input
+                  type="text"
+                  value={teacher.image}
+                  onChange={(e) => handleFieldChange(e, index, "image")}
+                />
+                {teacher.image && <img src={teacher.image} alt={teacher.teacherName} style={{ width: '70px', height: '100px' }} />}
+              </td>
               <td>
                 <input
                   type="text"
@@ -134,14 +143,7 @@ const TeachersList = () => {
                   onChange={(e) => handleFieldChange(e, index, "subject")}
                 />
               </td>
-              <td>
-                <input
-                  type="text"
-                  value={teacher.image}
-                  onChange={(e) => handleFieldChange(e, index, "image")}
-                />
-                {teacher.image && <img src={teacher.image} alt={teacher.teacherName} />}
-              </td>
+             
               {/* Render other fields as needed */}
             </tr>
           ))}

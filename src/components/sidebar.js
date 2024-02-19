@@ -6,7 +6,7 @@ import './sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>TSConnect</h2>
+      <h2>Shikshak Admin</h2>
       <ul>
         <li>
           <Link to="/React-Sidebar-example/dashboard">
@@ -32,17 +32,9 @@ const Sidebar = () => {
             <span>StudentRequest</span>
           </Link>
         </li>
-        <li>
-          <Link to="/React-Sidebar-example/teacherMatch">
-          
-            <span>TeacherMatch</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/React-Sidebar-example/assignteacher">
         
-            <span>Assignteacher</span>
-          </Link>
+        <li>
+         
         </li>
       </ul>
     </div>

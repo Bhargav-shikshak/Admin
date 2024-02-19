@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, onValue, update, remove } from "firebase/database";
-import './student.css';
+import './Studentrequest.css';
 function DisplayTeacherData() {
   const [teachers, setTeachers] = useState([]);
 
@@ -66,7 +66,7 @@ function DisplayTeacherData() {
               <td>{teacher.Contact}</td>
               <td>{teacher.Status}</td>
               <td>
-              <button onClick={() => handleUpdateStatus(teacher.uid)} style={{ backgroundColor: 'blue', color: 'white' }}>Accept</button>
+              <button onClick={() => handleUpdateStatus(teacher.uid)} style={{ backgroundColor: 'blue', color: 'white', width:'100%' }}>Accept</button>
 
               </td>
               <td>

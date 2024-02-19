@@ -8,7 +8,7 @@ import StudentComponent from "./pages/Student";
 import TeacherComponent from "./pages/Teacher";
 import StudentRequest from "./pages/Studentrequest";
 import TeacherMatch from "./pages/Teachermatch";
-import AssignTeacher from "./pages/Assignteacher";
+
 import {app} from './fierbase/fierbase';
 
 function App() {
@@ -40,10 +40,7 @@ function App() {
                 path={"/React-Sidebar-example/teacherMatch"}
                 element={<TeacherMatch />}
               />
-              <Route
-                path={"/React-Sidebar-example/assignteacher"}
-                element={<AssignTeacher />}
-              />
+             
             </Routes>
           </div>
         </div>

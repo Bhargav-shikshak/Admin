@@ -1,12 +1,13 @@
 .greens {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
     align-items: center;
     height: 100vh; /* Adjust the height as needed */
   }
   
   .title {
-    color: #3498db;
+    color: #000000;
     text-align: right;
   }
   
