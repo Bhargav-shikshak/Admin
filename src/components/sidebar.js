@@ -9,25 +9,25 @@ const Sidebar = () => {
       <h2>Shikshak Admin</h2>
       <ul>
         <li>
-          <Link to="/React-Sidebar-example/dashboard">
+          <Link to="dashboard">
          
             <span>Dashboard</span>
           </Link>
         </li>
         <li>
-          <Link to="/React-Sidebar-example/TeacherComponent">
+          <Link to="TeacherComponent">
           
             <span>Teacher</span>
           </Link>
         </li>
         <li>
-          <Link to="/React-Sidebar-example/StudentComponent">
+          <Link to="StudentComponent">
          
             <span>Student</span>
           </Link>
         </li>
         <li>
-          <Link to="/React-Sidebar-example/studentRequest">
+          <Link to="studentRequest">
           
             <span>StudentRequest</span>
           </Link>
