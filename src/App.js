@@ -21,19 +21,19 @@ function App() {
             <Routes>
               <Route
                 exact
-                path={"/React-Sidebar-example/dashboard"}
+                path={"dashboard"}
                 element={<Dashboard />}
               />
               <Route
-                path={"/React-Sidebar-example/StudentComponent"}
+                path={"StudentComponent"}
                 element={<StudentComponent />}
               />
               <Route
-                path={"/React-Sidebar-example/TeacherComponent"}
+                path={"TeacherComponent"}
                 element={<TeacherComponent/>}
               />
               <Route
-                path={"/React-Sidebar-example/studentRequest"}
+                path={"studentRequest"}
                 element={<StudentRequest />}
               />
               <Route
